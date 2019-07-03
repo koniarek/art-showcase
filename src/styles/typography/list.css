@@ -1,0 +1,25 @@
+ol, 
+ul {
+  margin: 0;
+  margin-top: -1rem;
+  margin-bottom: 3rem;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li,
+li a {
+  color: var(--dark-gray);
+}
+
+@media only screen and (max-width: 600px) {
+  ol, ul {
+    margin-top: 0;
+    margin-bottom: 4rem;
+    margin-left: 3rem;
+  }
+}

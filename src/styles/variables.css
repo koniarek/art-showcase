@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/*
+ * CSS Variables for color, typography and layout 
+ */
+:root {
+  --base: 9px;
+
+  --white: rgba(255, 255, 255, 1.0);
+  --black: rgba(36, 31, 32, 1.0);
+  --dark-gray: rgba(36, 31, 32, 0.8);
+  --light-gray: rgba(36, 31, 32, 0.6);
+  --lightest-gray: rgba(36, 31, 32, 0.045);
+  --blue: blue;
+  --red: red;
+
+  --default-font-size: 2rem;
+  --default-font-family-name: 'din-2014';
+  --default-font-family: 'din-2014', sans-serif;
+  --default-line-height: 3rem;
+
+  --default-border: var(--default-border-width) solid var(--black);
+  --default-border-width: 1px;
+  --default-border-radius: 1px;
+
+  --default-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.025);
+
+  --small-font-size: 1.5rem;
+  --small-line-height: 3rem;
+
+  --default-margin: -1px 0 18px 0;
+  --smallest-margin: 3rem;
+  --small-margin: 7rem;
+  --large-margin: 12rem;
+  --default-vertical-margin: 0.5rem;
+
+  --small-screen-small-margin: 5rem;
+  --small-screen-large-margin: 7rem;
+
+  --h1-font-size:var(--default-font-size);
+  --h1-font-weight: 600;
+  --h1-line-height: var(--default-line-height);
+  --h1-margin: 45px 0 18px 0;
+  --h1-color: var(--black);
+
+  --h2-font-size: var(--default-font-size);
+  --h2-font-weight: 600;
+  --h2-line-height: var(--default-line-height);
+  --h2-margin: 45px 0 18px 0;
+  --h2-color: var(--black);
+
+  --h3-font-size: 1.5rem;
+  --h3-font-weight: 400;
+  --h3-line-height: 3rem;
+  --h3-margin: 2rem 0 1rem 0;
+  --h3-color: var(--light-gray);
+
+  --z-index-0: 0;
+  --z-index-1: 1;
+  --z-index-2: 2;
+}

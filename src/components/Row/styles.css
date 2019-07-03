@@ -1,0 +1,23 @@
+.row {
+  position: relative;
+  display: flex;
+  flex: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-content: auto;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*
+ * Add support for iPhone X in landscape orientation.
+ * See more: https://revelry.co/iphone-x-problem-areas/
+ */
+.site-header > .row,
+.site-footer > .row,
+.site-main-content > .row {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}

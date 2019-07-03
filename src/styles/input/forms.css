@@ -1,0 +1,40 @@
+form {
+  margin-top: var(--large-margin);
+  padding: 2rem;
+  border: 1px solid var(--black);
+  text-align: center;
+}
+
+input {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  height: 4rem;
+  border: 1px solid var(--black);
+  /* Reset the default border radius on iOS devices. */
+  border-radius: 0; 
+  box-shadow: 0;
+  font-size: var(--default-font-size);
+  line-height: var(--default-line-height);
+}
+
+input[type="text"],
+input[type="email"] {
+  padding-left: 1rem;
+  height: 38px;
+  width: 250px;
+  background: var(--white);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: var(--blue);
+}
+
+@media only screen and (max-width: 600px) {
+  input { 
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+}

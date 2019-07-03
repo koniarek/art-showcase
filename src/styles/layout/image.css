@@ -1,0 +1,67 @@
+/*
+ * Images are inline with text and have a simple default margin.
+ * Some images are inserted by Gatsby as a responsive image, e.g.,
+ * using CSS background styles.
+ */
+img,
+video,
+.gatsby-resp-image-wrapper {
+  display: block;
+  margin: var(--default-margin);
+  padding: 0;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+/*
+ * Figures include an image and a caption. Figures are well
+ * used in long bodies of text.
+ */
+figure {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-top: var(--small-margin);
+  margin-bottom: var(--small-margin);
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  figure {
+    margin-top: var(--small-screen-small-margin);
+    margin-bottom: var(--small-screen-small-margin);
+  }
+}
+
+/*
+ * On small screens, the image is styled as full 
+ * width, taking up an extra 2rem for the gutter.
+ */
+figure .gatsby-resp-image-wrapper {
+  position: relative;
+  margin: 0;
+  left: -2rem;
+  width: calc(100% + 4rem);
+}
+
+/*
+ * On large screens, the image is styled larger than
+ * the container and with a small margin.
+ */
+@media only screen and (min-width: 600px) {
+  figure .gatsby-resp-image-wrapper {
+    left: -4rem;
+    width: calc(100% + 8rem);
+  }
+}
+
+/* 
+ * The caption is always styled as small text. 
+ */
+figure figcaption {
+  text-align: center;
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
+  color: var(--light-gray);
+}

@@ -1,0 +1,71 @@
+p, 
+small,
+ol, ul, li {
+  padding: 0;
+  margin: var(--default-margin);
+  font-size: var(--default-font-size);
+  line-height: var(--default-line-height);
+  color: var(--dark-gray);
+  hyphens: none;
+}
+
+.gatsby-resp-image-wrapper > p {
+  margin: 17px 0 2rem 0 !important;
+}
+
+small {
+  display: block;
+  margin: 0;
+  color: var(--light-gray);
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
+  hyphens: none;
+}
+
+blockquote {
+  margin: 6rem 0;
+  padding: 1rem 4rem;
+  border-left: 1px solid var(--light-gray);
+}
+
+blockquote p {
+  margin: 0;
+  color: var(--light-gray);
+  font-style: italic;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+}
+
+blockquote cite:before {
+  content: '\2014\0020';
+}
+
+hr {
+  margin: var(--smallest-margin) auto;
+  width: 50%;
+  border: none;
+  border-top: 1px solid var(--light-gray);
+}
+
+/*
+ * When small text is used after a header, remove the margin from the 
+ * header so the small text is "nested" closer to the header. Also
+ * add an additional margin to the small text so there's still space
+ * between the small text and whatever is under it.
+ */
+h1 ~ small,
+h2 ~ small,
+h3 ~ small {
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  small {
+    margin-bottom: 0;
+  }
+}

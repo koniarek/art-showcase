@@ -1,0 +1,73 @@
+@import '../../styles/variables.css';
+
+/* 
+ * BEM Block: site-footer
+ * Description: Styles for the global website footer
+ * See more: https://en.bem.info/methodology/quick-start/
+ */
+.site-footer {
+  position: relative;
+  margin: 0;
+  padding: 2rem 0;
+  margin-top: var(--large-margin);
+  color: var(--light-gray);
+  user-select: none;
+  border-top: var(--default-border);
+}
+
+.site-footer__message,
+.site-footer__copyright {
+  text-align: right;
+  align-self: flex-end;
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
+}
+
+.site-footer__message small {
+  display: inline-block;
+}
+
+.site-footer__glyph-heart, 
+.site-footer__glyph-copyright {
+  margin-right: .5rem;
+}
+
+.site-footer__glyph-heart,
+.site-footer__glyph-copyright,
+.site-footer__glyph-rss {
+  display: inline;
+  position: relative;
+}
+
+.site-footer__glyph-heart {
+  fill: var(--red);
+}
+
+.site-footer__glyph-copyright {
+  top: -2px;
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.site-footer__glyph-rss {
+  margin-left: .5rem;
+  max-height: 10px;
+  max-width: 10px;
+  fill: var(--light-gray);
+}
+
+a:hover > .site-footer__glyph-rss {
+  fill: var(--blue);
+}
+
+@media only screen and (max-width: 600px),
+only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .site-footer__message {
+    margin-top: 2rem;
+  }
+
+  .site-footer__message,
+  .site-footer__copyright {
+    text-align: left;
+  }
+}

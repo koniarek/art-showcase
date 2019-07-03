@@ -1,0 +1,55 @@
+@import '../../styles/variables.css';
+
+/* 
+ * BEM Block: site-header
+ * Description: Styles for the global website header
+ * See more: https://en.bem.info/methodology/quick-start/
+ */
+.site-header {  
+  position: fixed;
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding: 2rem 0;
+  height: 8rem;
+  width: 100%;
+  z-index: var(--z-index-1);
+  text-align: left;
+  background: var(--white);
+  user-select: none;
+  border-bottom: var(--default-border);
+}
+
+.site-header__title {
+  display: block;
+  position: relative;
+  bottom: 1px;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: right;
+  align-self: flex-end;
+}
+
+.site-header__title,
+.site-header__title:hover,
+.site-header__title:active {
+  color: var(--black);
+}
+
+/* 
+ * On small screens, the header is not fixed and is
+ * smaller in height. The navigation also shifts to
+ * to under the title, requiring an extra margin.
+ */
+@media only screen and (max-width: 600px),
+only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .site-header {  
+    position: absolute;
+    padding: 1rem 0;
+    height: auto;
+  }
+
+  .site-header__title {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,11 @@
+/* 
+ * BEM Block: index-page
+ * Description: Styles for the "Index"/Home page
+ * See more: https://en.bem.info/methodology/quick-start/
+ */
+
+/* Add a margin to the Twitter widget */
+.index-page__twitter {
+  margin-top: 3rem;
+  user-select: none;
+}

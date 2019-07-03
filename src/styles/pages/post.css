@@ -1,0 +1,21 @@
+@import '../variables.css';
+
+/* 
+ * BEM Block: post-page
+ * Description: Styles for the "Post" page
+ * See more: https://en.bem.info/methodology/quick-start/
+ */
+.post-page__image {
+  position: relative;
+  left: -2rem;
+  width: calc(100% + 4rem);
+  margin-bottom: var(--small-margin);
+}
+
+@media only screen and (min-width: 600px) {
+  .post-page__image {
+    left: -4rem;
+    width: calc(100% + 8rem);
+  }
+}
+

@@ -1,0 +1,62 @@
+@import '../../styles/variables.css';
+
+/* 
+ * BEM Block: site-navigation
+ * Description: Styles for the global website header
+ * See more: https://en.bem.info/methodology/quick-start/
+ */
+.site-navigation {
+  display: inline-block;
+  position: relative;
+  bottom: 1px;
+  height: 4rem;
+  line-height: 4rem;
+}
+
+.site-navigation__item {
+  margin-left: 3rem;
+  width: 72px;
+  color: var(--light-gray);
+}
+
+.site-navigation__item:hover,
+.site-navigation__item:focus,
+.site-navigation__item:active {
+  color: var(--blue);
+}
+
+.site-navigation__item-position-bottom.site-navigation__item-state-active {
+  padding-top: calc(2.5rem + 1px);
+  border-top: 2px solid var(--blue);
+}
+
+.site-navigation__item-position-top.site-navigation__item-state-active {
+  padding-bottom: calc(2.5rem + 1px);
+  border-bottom: 2px solid var(--blue);
+}
+
+.site-navigation__item:first-of-type {
+  margin-left: 0;
+}
+
+@media only screen and (max-width: 600px),
+only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .site-navigation {
+    height: 2rem;
+    line-height: 2rem;
+  }
+
+  .site-navigation__item {
+    margin: 0;
+    margin-right: 2rem;
+    width: auto;
+  }
+
+  .site-navigation__item-position-top.site-navigation__item-state-active {
+    padding-bottom: 1.25rem;
+  }
+
+  .site-navigation__item-position-bottom.site-navigation__item-state-active {
+    padding-top: 2rem;
+  }
+}

@@ -1,0 +1,21 @@
+.padding.padding-size-default {
+  padding-top: var(--default-margin);
+}
+
+.padding.padding-size-small {
+  padding-top: var(--small-margin);
+}
+
+.padding.padding-size-large {
+  padding-top: var(--large-margin);
+}
+
+@media only screen and (max-width: 400px) {
+  .padding.padding-size-small {
+    padding-top: var(--small-screen-small-margin);
+  }
+
+  .padding.padding-size-large {
+    padding-top: var(--small-screen-large-margin);
+  }
+}

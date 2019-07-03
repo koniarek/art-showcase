@@ -1,0 +1,103 @@
+.column {
+  position: relative;
+  flex: 0 0 auto;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/*
+ * Only add a gutter to rows that have padding.
+ */
+.row:not(.padding-size-none) > .column {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.row.padding-size-none > .column:last-of-type {
+  padding-right: 2rem;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .column-flex-order-large-0 {
+    order: 0;
+  }
+
+  .column-flex-order-large-1 {
+    order: 1;
+  }
+
+  .column-flex-order-large-2 {
+    order: 2;
+  }
+
+  .column-size-large-3 {
+    max-width: calc((3 * 100%) / 12);
+    flex-basis: calc((3 * 100%) / 12);
+  }
+
+  .column-size-large-6 {
+    max-width: calc((6 * 100%) / 12);
+    flex-basis: calc((6 * 100%) / 12);
+  }
+
+  .column-size-large-6:only-child {
+    margin-left: calc((3 * 100%) / 12);
+    max-width: calc((6 * 100%) / 12);
+    flex-basis: calc((6 * 100%) / 12);
+  }
+
+  .column-size-large-9 {
+    max-width: calc((9 * 100%) / 12);
+    flex-basis: calc((9 * 100%) / 12);
+  }
+
+  .column-size-large-12 {
+    max-width: calc((12 * 100%) / 12);
+    flex-basis: calc((12 * 100%) / 12);
+  }
+}
+
+/*
+ * Small screen and iPhone X landscape styles
+ */ 
+@media only screen and (max-width: 600px),
+only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .column-flex-order-small-0 {
+    order: 0;
+  }
+
+  .column-flex-order-small-1 {
+    order: 1;
+  }
+
+  .column-flex-order-small-2 {
+    order: 2;
+  }
+
+  .column-hide-on-small {
+    display: none;
+  }
+
+  .column-size-small-4 {
+    max-width: calc((4 * 100%) / 12);
+    flex-basis: calc((4 * 100%) / 12);
+  }
+
+  .column-size-small-6 {
+    max-width: calc((6 * 100%) / 12);
+    flex-basis: calc((6 * 100%) / 12);
+  }
+
+  .column-size-small-8 {
+    max-width: calc((8 * 100%) / 12);
+    flex-basis: calc((8 * 100%) / 12);
+  }
+
+  .column-size-small-12 {
+    max-width: calc((12 * 100%) / 12);
+    flex-basis: calc((12 * 100%) / 12);
+  }
+}

@@ -1,0 +1,161 @@
+# Netlify CMS Configuration
+# See more: https://www.netlifycms.org/docs/configuration-options/
+backend:
+  name: github
+  repo: pburtchaell/pburtchaell.com
+
+media_folder: src/assets
+
+display_url: https://pburtchaell.com
+
+# Content collections for settings, projects, pages, notes and posts
+collections:
+
+  # The settings collection includes files to modify/configure the website
+  - name: settings
+    label: Settings
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: metadata
+        label: Site Metadata
+        file: src/content/metadata.json
+        description: General Site Metadata
+        fields:
+          - label: Site Title
+            name: siteTitle
+            widget: string
+            required: true
+          - label: Site URL
+            name: siteUrl
+            widget: string
+            required: true
+          - label: Site Description
+            name: siteDescription
+            widget: string
+            required: true
+          - label: Site Introduction
+            name: siteIntroduction
+            widget: string
+            required: true
+          - label: Site Keywords
+            name: siteKeywords
+            widget: list
+            required: true
+          - label: Enable Portfolio?
+            name: enablePortfolio
+            widget: boolean
+            required: true
+          - label: Portfolio Companies
+            name: portfolioCompanies
+            widget: list
+            required: true
+
+  # The projects collection contains case studies on my work
+  - name: projects
+    label: Projects
+    label_singular: Project
+    # Folder collections represent one or more files with the same format,
+    # fields, and configuration options
+    folder: src/content/projects
+    slug: "{{year}}-{{slug}}"
+    create: true
+
+    # Fields to include for a project
+    # See more: https://www.netlifycms.org/docs/widgets/
+    fields:
+      # Admin fields (default to unpublished project)
+      - { name: published, label: Published, widget: boolean, default: false }
+      - { name: featured, label: Featured, widget: boolean, default: false }
+      - { name: templateKey, label: Template Key, widget: hidden, default: project }
+
+      # Meta fields (required)
+      - { name: date, label: Date, widget: date, required: true }
+      - { name: title, label: Title, widget: string, required: true }
+      - { name: description, label: Description, widget: string, required: true }
+      - { name: client, label: Client, widget: string, required: false }
+      - { name: collaborators, label: Collaborators, widget: list, required: false }
+      - { name: path, label: Path, widget: string, required: true }
+
+      # Category field (required)
+      - name: category
+        label: Category
+        widget: select
+        required: true
+        default:
+          - ""
+        options:
+          - Product Design
+          - Web Design
+          - UX Design
+          - Open Source
+          - Web Development
+          - Mobile Development
+
+      # Keywords field for SEO (optional)
+      - { name: keywords, label: Keywords, widget: list, required: false }
+
+      # Markdown body field (required)
+      - { name: body, label: Body, widget: markdown, required: true }
+
+      # Featured image used in lists (optional)
+      - { name: featuredImage, label: Featured Image, widget: file, required: false }
+
+      # External link fields (optional)
+      - { name: externalLink, label: External Link, widget: string, default: "", required: false }
+      - { name: externalLinkDescription, label: External Link Description, widget: string, default: "", required: false }
+
+  # The notes collection includes informal writing on my personal/professional hobbies/interests
+  - name: notes
+    label: Notes
+    label_singular: Note
+    folder: src/content/notes
+    slug: "{{slug}}"
+    create: true
+    delete: true
+    fields:
+      - { name: published, label: Published, widget: boolean, default: false }
+      - { name: templateKey, label: Template Key, widget: hidden, default: project }
+      - { name: date, label: Date, widget: date, required: true }
+      - { name: title, label: Title, widget: string, required: true }
+      - { name: description, label: Description, widget: string, required: true }
+      - { name: keywords, label: Keywords, widget: list, required: false }
+      - { name: body, label: Body, widget: markdown, required: true }
+      - { name: path, label: Path, widget: string, required: true }
+    
+  # The pages collection includes stand alone pages, e.g., "About" page
+  - name: pages
+    label: Pages
+    label_singular: Page
+    folder: src/content/pages
+    slug: "{{slug}}"
+    create: true
+    delete: true
+    fields:
+      - { name: published, label: Published, widget: boolean, default: false }
+      - { name: templateKey, label: Template Key, widget: hidden, default: post }
+      - { name: title, label: Title, widget: string, required: true }
+      - { name: description, label: Description, widget: string, required: true }
+      - { name: keywords, label: Keywords, widget: list, required: false }
+      - { name: body, label: Body, widget: markdown, required: true }
+      - { name: path, label: Path, widget: string, required: true }
+
+  # The posts collection includes formal writing, e.g., blog posts/articles
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: src/content/posts
+    slug: "{{year}}-{{slug}}"
+    create: true
+    delete: true
+    fields:
+      - { name: published, label: Published, widget: boolean, default: false }
+      - { name: templateKey, label: Template Key, widget: hidden, default: post }
+      - { name: date, label: Date, widget: date, required: true }
+      - { name: title, label: Title, widget: string, required: true }
+      - { name: description, label: Description, widget: string, required: true }
+      - { name: keywords, label: Keywords, widget: list, required: false }
+      - { name: featuredImage, label: Featured Image, widget: file, required: true }
+      - { name: body, label: Body, widget: markdown, required: true }
+      - { name: path, label: Path, widget: string, required: true }

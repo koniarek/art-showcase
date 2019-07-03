@@ -1,0 +1,54 @@
+button,
+.button,
+input[type="submit"] {
+  display: inline-block;
+  margin: 0;
+  margin-left: 1rem;
+  padding: 0;
+  padding: 0 1rem;
+  height: 40px;
+  border: var(--default-border);
+  color: var(--black);
+  font-size: var(--default-font-size);
+  line-height: var(--default-line-height);
+  border-radius: 0;
+  background: var(--white);
+  user-select: none;
+}
+
+/* 
+ * The small button styles are useful for inline buttons or buttons
+ * that are included with a text label.
+ */
+.button-size-small {
+  height: 3rem;
+}
+
+button:first-child,
+.button:first-child,
+input[type="submit"]:first-child {
+  margin-left: 0;
+}
+
+button:hover, button.button-state-hover,
+.button:hover, .button.button-state-hover,
+input[type="submit"]:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  cursor: pointer;
+}
+
+button:active, button.button-state-active,
+.button:active, .button.button-state-active,
+input[type="submit"]:active {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+@media only screen and (max-width: 600px) {
+  button,
+  .button,
+  input[type="submit"] {
+    margin: 0 auto 1rem auto;
+  }
+}

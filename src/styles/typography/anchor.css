@@ -1,0 +1,39 @@
+a,
+a:active,
+a:hover {
+  color: var(--blue);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+p a,
+small a,
+li a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+p a:hover,
+small a:hover,
+li a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.anchor-arrow-left,
+a.anchor-arrow-left::after {
+  content: '\2192';
+  margin-left: var(--default-vertical-margin);
+}
+
+.anchor-arrow-right,
+a.anchor-arrow-right::before {
+  content: '\2190';
+  margin-right: var(--default-vertical-margin);
+}
+
+.anchor-arrow-upright,
+a.anchor-arrow-upright::after {
+  content: '\2197';
+  margin-left: var(--default-vertical-margin);
+}

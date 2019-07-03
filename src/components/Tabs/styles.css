@@ -1,0 +1,12 @@
+.tabs {
+  position: relative;
+  height: 5rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 1rem;
+}
+
+.tabs__bar {
+  position: absolute;
+  width: 450px;
+}

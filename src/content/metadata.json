@@ -1,0 +1,33 @@
+{
+  "siteTitle": "Patrick Burtchaell",
+  "siteUrl": "https://pburtchaell.com",
+  "siteDescription": "Designer and software developer working with thoughtful product and technology teams.",
+  "siteIntroduction": "Technology should work for and with people, creating a connected world that's better for everyone. Originally from New Orleans, I currently work as a product designer at Facebook in California.",
+  "siteKeywords": [
+    "patrick",
+    "burtchaell",
+    "designer",
+    "developer",
+    "software",
+    "product",
+    "new orleans",
+    "san francisco",
+    "menlo park",
+    "bay area",
+    "web design",
+    "product design",
+    "react",
+    "redux",
+    "nodejs",
+    "gatsby",
+    "netlify"
+  ],
+  "enablePortfolio": false,
+  "portfolioCompanies": [
+    "Facebook",
+    "Gigster",
+    "Revelry Labs",
+    "Fixt",
+    "filee"
+  ]
+}

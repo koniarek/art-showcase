@@ -1,0 +1,12 @@
+@import '../variables.css';
+
+/* 
+ * BEM Block: writing-page
+ * Description: Styles for the "Writing" page
+ * See more: https://en.bem.info/methodology/quick-start/
+ */
+@media only screen and (max-width: 600px) {
+  .writing-page__content {
+    margin-bottom: var(--small-screen-small-margin);
+  }
+}

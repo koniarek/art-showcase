@@ -1,0 +1,70 @@
+@import '../../styles/variables.css';
+
+.list-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .list-item {
+    padding-right: 2rem;
+  }
+}
+
+/*
+ * The list item background is slightly larger than the actual
+ * width of the list item. This is so the hover state has some
+ * padding. In order to offset this extra width (so the list
+ * item aligns with the grid), there is a -2rem top and -2rem
+ * left rule. This only applies on large screens.
+ */ 
+@media only screen and (min-width: 600px) {
+  .list-item--background {
+    position: relative;
+    top: -2rem;
+    left: -2rem;
+    padding: 2rem;
+    width: calc(100% + 2rem);
+    border-radius: var(--default-border-radius);
+  }
+
+  .list-item:hover .list-item--background,
+  .list-item:active .list-item--background {
+    background-color: var(--lightest-gray);
+  }
+}
+
+/*
+ * For small screens, the just decrease the opacity 
+ * for the hover/active state.
+ */ 
+@media only screen and (max-width: 600px) {
+  .list-item:hover,
+  .list-item:active {
+    opacity: 0.5;
+  }
+}
+
+.list-item .list-item__featured-image {
+  margin: var(--default-margin);
+  border-radius: var(--default-border-radius);
+}
+
+/* Remove padding on the first and last list items */
+.list-item__link:first-of-type .list-item { margin-top: 0 }
+.list-item__link:last-of-type .list-item { margin-bottom: 0 }
+
+.list-item__title,
+.list-item__details-excerpt {
+  margin: 0;
+}
+
+.list-item__details-excerpt {
+  color: var(--dark-gray);
+  font-style: italic;
+}
+
+/* Display an m dash after the category and before the year */
+.list-item__details-category:after {
+  content: '\0020\00B7\0020';
+}

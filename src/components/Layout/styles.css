@@ -1,0 +1,34 @@
+@import '../../styles/variables.css';
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.site-container__back-link {
+  position: absolute;
+  top: 4rem;
+}
+
+/*
+ * The main class is the child of the main container class. The page footer and
+ * the page header are siblings.  
+ */
+.site-main-content {
+  flex: 1 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+}
+
+.site-main-content__newsletter-form {
+  align-self: flex-end;
+}
+
+.site-main-content__newsletter-form-submitted {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}

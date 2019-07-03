@@ -1,0 +1,19 @@
+@import '../variables.css';
+
+/* 
+ * BEM Block: project-page
+ * Description: Styles for the project template
+ */
+.project-page__description {
+  color: var(--light-gray);
+}
+
+@media only screen and (max-width: 600px) {
+  .project-page__description {
+    margin-top: -1rem;
+  }
+
+  .project-page__sidebar-right {
+    padding-bottom: var(--small-screen-small-margin);
+  }
+}
